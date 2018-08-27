@@ -10,3 +10,5 @@ WORKDIR /root
 RUN git clone https://github.com/bebbo/amiga-gcc
 RUN cd amiga-gcc && make update && make all
 ENV PATH="/opt/amiga/bin:${PATH}"
+WORKDIR /opt/amiga/bin
+CMD /opt/amiga/bin/m68k-amigaos-gcc
