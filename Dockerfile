@@ -10,5 +10,6 @@ WORKDIR /root
 RUN git clone https://github.com/bebbo/amiga-gcc
 RUN cd amiga-gcc && make update && make all
 ENV PATH="/opt/amiga/bin:${PATH}"
+COPY ./SDL_image-pack /opt/amiga/SDL_image-pack
 WORKDIR /opt/amiga/bin
 CMD /opt/amiga/bin/m68k-amigaos-gcc
