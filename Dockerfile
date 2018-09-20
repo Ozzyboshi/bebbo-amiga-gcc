@@ -12,5 +12,6 @@ RUN cd amiga-gcc && make update && make all
 ENV PATH="/opt/amiga/bin:${PATH}"
 COPY ./SDL_image-pack /opt/amiga/SDL_image-pack
 COPY ./zlib-package /opt/amiga/zlib-package
+COPY ./SDL_mixer /opt/amiga/SDL_mixer
 WORKDIR /opt/amiga/bin
 CMD /opt/amiga/bin/m68k-amigaos-gcc
