@@ -18,12 +18,13 @@ COPY ./libvorbis /opt/amiga/libvorbis
 COPY ./libfreetype2 /opt/amiga/libfreetype2
 
 # SDL libraries from Richter with AMMX support
-mkdir /opt/amiga/ammx
+RUN mkdir /opt/amiga/ammx
 WORKDIR /opt/amiga/ammx
-git clone https://github.com/Amigaports/libSDL12
-sed -i 's/-msoft-float/-mhard-float/g'  Makefile.bax
-sed -i 's/\/opt\/amigaos-68k/\/opt\/amiga"/g'  Makefile.bax
-make -f Makefile.bax
+RUN git clone https://github.com/Amigaports/libSDL12
+WORKDIR /opt/amiga/ammx/libSDL12
+RUN sed -i 's/-msoft-float/-mhard-float/g'  Makefile.bax
+RUN sed -i 's/\/opt\/amigaos-68k/\/opt\/amiga"/g'  Makefile.bax
+RUN make -f Makefile.bax
 # end of SDL libraries from Richter with AMMX support
 
 WORKDIR /opt/amiga/bin
