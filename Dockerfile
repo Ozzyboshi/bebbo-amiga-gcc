@@ -17,15 +17,13 @@ COPY ./SDL_mixer /opt/amiga/SDL_mixer
 COPY ./libvorbis /opt/amiga/libvorbis
 COPY ./libfreetype2 /opt/amiga/libfreetype2
 
-# SDL libraries from Richter with AMMX support
+# SDL libraries from Amigaports with AMMX support
 RUN mkdir /opt/amiga/ammx
 WORKDIR /opt/amiga/ammx
 RUN git clone https://github.com/Amigaports/libSDL12
 WORKDIR /opt/amiga/ammx/libSDL12
-RUN sed -i 's/-msoft-float/-mhard-float/g'  Makefile.bax
-RUN sed -i 's/\/opt\/amigaos-68k/\/opt\/amiga/g'  Makefile.bax
-RUN make -f Makefile.bax
-# end of SDL libraries from Richter with AMMX support
+RUN make CPU=68080 PREFX=/opt/amiga
+# end of SDL libraries from Amigaports with AMMX support
 
 WORKDIR /opt/amiga/bin
 CMD /opt/amiga/bin/m68k-amigaos-gcc
