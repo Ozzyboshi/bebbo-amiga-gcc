@@ -16,6 +16,10 @@ This should be enough to try to port something based on SDL 1.2 to Classic Amiga
 
 # Versions
 
+- 1.3 : Bebbo's gcc latest commit c344914e6acced3abe49d7640be99c6ae7529051 (03/12/2019), Amigaports SDL latest commit : 9fac84dbfaccc24501808f31c2a171524e951d8b (6/12/2019)
+Added new liSDL make for 68080
+added zip package in image
+
 - 1.2 : Bebbo's gcc latest commit c344914e6acced3abe49d7640be99c6ae7529051 (03/12/2019), Amigaports SDL latest commit : 9fac84dbfaccc24501808f31c2a171524e951d8b (6/12/2019)
 Added new liSDL make for 68080
 
