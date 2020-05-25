@@ -6,7 +6,7 @@ MAINTAINER Ozzyboshi <gun101@email.it>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get -y install zip wget bison make git gcc g++ lhasa libgmp-dev libmpfr-dev libmpc-dev flex gettext texinfo rsync joe vim locate curl inetutils-ping libfreetype6-dev libsdl1.2-dev libncurses-dev
+RUN apt-get update && apt-get -y install zip wget bison make git gcc g++ lhasa libgmp-dev libmpfr-dev libmpc-dev flex gettext texinfo rsync joe vim locate curl inetutils-ping libfreetype6-dev libsdl1.2-dev libncurses-dev autotools-dev
 WORKDIR /root
 RUN git clone https://github.com/bebbo/amiga-gcc.git
 RUN cd amiga-gcc && make update && make all
