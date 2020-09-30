@@ -1,7 +1,7 @@
 # Docker image for building Bebbo's Amiga toolchain from https://github.com/bebbo/amiga-gcc
 # The image also includes some useful libraries from amigaports
 
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER Ozzyboshi <gun101@email.it>
 
 ENV DEBIAN_FRONTEND noninteractive
