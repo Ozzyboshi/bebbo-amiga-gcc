@@ -25,5 +25,9 @@ WORKDIR /opt/amiga/ammx/libSDL12
 RUN make CPU=68080 PREFX=/opt/amiga
 # end of SDL libraries from Amigaports with AMMX support
 
+#Make sure we have latest vasm
+WORKDIR /root
+RUN wget http://sun.hasenbraten.de/vasm/release/vasm.tar.gz && tar -xvzpf vasm.tar.gz && cd vasm && make CPU=m68k SYNTAX=mot && cp ./vasmm68k_mot  /opt/amiga/bin/vasmm68k_mot
+
 WORKDIR /opt/amiga/bin
 CMD /opt/amiga/bin/m68k-amigaos-gcc
