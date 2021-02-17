@@ -16,6 +16,8 @@ This should be enough to try to port something based on SDL 1.2 to Classic Amiga
 
 # Versions
 
+- 1.7 : Always latest vasm
+
 - 1.6 : Bebbo's gcc latest commit dd1ee2dc17f0dd3d98711c0f5092127a1a0edf84 (05/01/2021), Amigaports SDL latest commit :324f6bc150eea7fbf25a0fb9a4d26f1ef6b9d984 (3/5/2020)
 
 - 1.5 : Bebbo's gcc latest commit c526750b6c32c63c3ba2a2ca7d9dd20308c59300 (15/04/2020), Amigaports SDL latest commit :324f6bc150eea7fbf25a0fb9a4d26f1ef6b9d984 (3/5/2020)
